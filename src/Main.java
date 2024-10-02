@@ -103,8 +103,8 @@ public class Main {
                 3, 40_000);
         Employee eight = new Employee("Маршалл Брюс Мэтерс",
                 4, 45_000);
-//        Employee nine = new Employee("Махатма Ганди",
-//                5, 50_000);
+        Employee nine = new Employee("Махатма Ганди",
+                5, 50_000);
 
         Employee[] book = new Employee[10];
         book[0] = zero;
@@ -116,7 +116,7 @@ public class Main {
         book[6] = six;
         book[7] = seven;
         book[8] = eight;
-//        book[9] = nine;
+        book[9] = nine;
 
         printAllData(book);
         System.out.println();
