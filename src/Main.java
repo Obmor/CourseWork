@@ -21,11 +21,11 @@ public class Main {
         System.out.println("Сумма затрат за месяц равна " + result);
     }
 
-
+// Find Min Salary
     public static void findMinSalary(Employee[] minSalary) {
         int minSalaryEmployee = minSalary[0].getSalary();
         for (int i = 0; i < minSalary.length; i++) {
-            if (minSalaryEmployee >= minSalary[i].getSalary()) {
+            if (minSalary[i].getSalary() < minSalaryEmployee) {
                 minSalaryEmployee = minSalary[i].getSalary();
                 System.out.println("Сотрудник с минимальной ЗП является - " + minSalary[i].getFullName() +
                         ", ЗП составляет - " + minSalary[i].getSalary() + " рублей.");
@@ -33,28 +33,44 @@ public class Main {
         }
     }
 
+
+
+
+
+    //    Find Max Salary
+//    public static void findMaxSalary(Employee[] maxSalary) {
+//        int maxSalaryEmployee = maxSalary[0].getSalary();
+//        for (int i = 0; i < maxSalary.length; i++) {
+//            if (maxSalaryEmployee < maxSalary[i].getSalary()) {
+//                maxSalaryEmployee = maxSalary[i].getSalary();
+//            }
+//            System.out.println(maxSalary[i].getSalary());
+//        }
+//    }
+
+
     public static void main(String[] args) {
 
-        Employee zero = new Employee("AAA",
-                111, 5_000);
-        Employee one = new Employee("BBB",
-                222, 10_000);
-        Employee two = new Employee("CCC",
-                333, 15_000);
-        Employee three = new Employee("DDD",
-                444, 20_000);
-        Employee four = new Employee("EEE",
-                555, 25_000);
-        Employee five = new Employee("FFF",
-                111, 30_000);
-        Employee six = new Employee("GGG",
-                222, 35_000);
-        Employee seven = new Employee("HHH",
-                333, 4_000);
-        Employee eight = new Employee("III",
-                444, 45_000);
-        Employee nine = new Employee("JJJ",
-                555, 50_000);
+        Employee zero = new Employee("Айзек Азимов",
+                1, 5_000);
+        Employee one = new Employee("Ледовских Ирина Владимировна",
+                2, 10_000);
+        Employee two = new Employee("Стивен Кинг",
+                3, 15_000);
+        Employee three = new Employee("Филип К. Дик",
+                4, 20_000);
+        Employee four = new Employee("Иешуа Га-Ноцри",
+                5, 25_000);
+        Employee five = new Employee("Мария Кюри",
+                1, 30_000);
+        Employee six = new Employee("Артемий Татьянович Лебедев",
+                2, 35_000);
+        Employee seven = new Employee("Сигурни Иувер",
+                3, 40_000);
+        Employee eight = new Employee("Маршалл Брюс Мэтерс",
+                4, 45_000);
+        Employee nine = new Employee("Махатма Ганди",
+                5, 50_000);
 
         Employee[] book = new Employee[10];
         book[0] = zero;
@@ -75,6 +91,9 @@ public class Main {
         System.out.println();
 
         findMinSalary(book);
+        System.out.println();
+
+//        findMaxSalary(book);
 
     }
 }
