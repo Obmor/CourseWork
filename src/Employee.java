@@ -4,34 +4,22 @@ public class Employee {
     private int iD;
     private String fullName;
     private int department;
-    private int salary;
+    private double salary;
     private static int count;
 
 
-// Constructor
-
-    public Employee(String fullName, int department, int salary) {
+    // Constructor
+    public Employee(String fullName, int department, double salary) {
         this.iD = ++count;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
     }
 
-// Get & Set
-    public int getiD() {
-        return iD;
-    }
 
-    public void setiD(int iD) {
-        this.iD = iD;
-    }
-
+    // Get && Set
     public String getFullName() {
         return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     public int getDepartment() {
@@ -42,23 +30,16 @@ public class Employee {
         this.department = department;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public static int getCount() {
-        return count;
-    }
 
-    public static void setCount(int count) {
-        Employee.count = count;
-    }
-
-// toString
+    // toString
     @Override
     public String toString() {
         return "Сотрудник {" +
@@ -69,7 +50,7 @@ public class Employee {
                 '}';
     }
 
-// Equal & Hash
+    // Equal & Hash
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
