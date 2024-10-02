@@ -26,9 +26,12 @@ public class Main {
         double minSalaryEmployee = minSalary[0].getSalary();
         String employee = null;
         for (int i = 0; i < minSalary.length; i++) {
-            if (minSalary[i].getSalary() <= minSalaryEmployee) {
-                minSalaryEmployee = minSalary[i].getSalary();
-                employee = minSalary[i].getFullName();
+            Employee minSalaryNew = minSalary[i];
+            if (minSalaryNew != null) {
+                if (minSalary[i].getSalary() <= minSalaryEmployee) {
+                    minSalaryEmployee = minSalary[i].getSalary();
+                    employee = minSalary[i].getFullName();
+                }
             }
         }
         System.out.println("Сотрудник с минимальной ЗП является - " + employee +
@@ -40,9 +43,12 @@ public class Main {
         double maxSalaryEmployee = maxSalary[0].getSalary();
         String employee = null;
         for (int i = 0; i < maxSalary.length; i++) {
-            if (maxSalary[i].getSalary() >= maxSalaryEmployee) {
-                maxSalaryEmployee = maxSalary[i].getSalary();
-                employee = maxSalary[i].getFullName();
+            Employee maxSalaryNew = maxSalary[i];
+            if (maxSalaryNew != null) {
+                if (maxSalary[i].getSalary() >= maxSalaryEmployee) {
+                    maxSalaryEmployee = maxSalary[i].getSalary();
+                    employee = maxSalary[i].getFullName();
+                }
             }
         }
         System.out.println("Сотрудник с максимальной ЗП является - " + employee +
@@ -68,8 +74,11 @@ public class Main {
     public static void printFullName(Employee[] name) {
         String fullName;
         for (int i = 0; i < name.length; i++) {
-            fullName = name[i].getFullName();
-            System.out.println(fullName);
+            Employee nameNew = name[i];
+            if (nameNew != null) {
+                fullName = name[i].getFullName();
+                System.out.println(fullName);
+            }
         }
     }
 
@@ -90,12 +99,12 @@ public class Main {
                 1, 30_000);
         Employee six = new Employee("Артемий Татьянович Лебедев",
                 2, 35_000);
-        Employee seven = new Employee("Сигурни Иувер",
+        Employee seven = new Employee("Сигурни Уивер",
                 3, 40_000);
         Employee eight = new Employee("Маршалл Брюс Мэтерс",
                 4, 45_000);
-        Employee nine = new Employee("Махатма Ганди",
-                5, 50_000);
+//        Employee nine = new Employee("Махатма Ганди",
+//                5, 50_000);
 
         Employee[] book = new Employee[10];
         book[0] = zero;
@@ -107,7 +116,7 @@ public class Main {
         book[6] = six;
         book[7] = seven;
         book[8] = eight;
-        book[9] = nine;
+//        book[9] = nine;
 
         printAllData(book);
         System.out.println();
