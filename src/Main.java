@@ -9,7 +9,7 @@ public class Main {
     public static Employee[] employees = new Employee[10];
 
     // Calculating of salary
-    public static double calculateSalaryPerMonth(Employee[] employees) {
+    public static double calculateSalaryPerMonth() {
         double result = 0;
         for (int i = 0; i < employees.length; i++) {
             Employee sumNew = employees[i];
@@ -21,7 +21,7 @@ public class Main {
     }
 
     // Find Min Salary
-    public static String findMinSalary(Employee[] employees) {
+    public static String findMinSalary() {
         double minSalaryEmployee = employees[0].getSalary();
         String employee = null;
         for (int i = 0; i < employees.length; i++) {
@@ -37,7 +37,7 @@ public class Main {
     }
 
     // Find Max Salary
-    public static String findMaxSalary(Employee[] employees) {
+    public static String findMaxSalary() {
         double maxSalaryEmployee = employees[0].getSalary();
         String employee = null;
         for (int i = 0; i < employees.length; i++) {
@@ -54,7 +54,7 @@ public class Main {
     }
 
     // Average Salary
-    public static double calculateAverage(Employee[] employees) {
+    public static double calculateAverage() {
         double result = 0;
         int averageLenght = 0;
         for (int i = 0; i < employees.length; i++) {
@@ -70,8 +70,8 @@ public class Main {
     }
 
     // Print Full Name
-    public static void printFullName(Employee[] employees) {
-        String fullName = null;
+    public static void printFullName() {
+        String fullName;
         for (int i = 0; i < employees.length; i++) {
             Employee nameNew = employees[i];
             if (nameNew != null) {
@@ -110,22 +110,21 @@ public class Main {
         System.out.println();
 
 
-        double total = calculateSalaryPerMonth(employees);
+        double total = calculateSalaryPerMonth();
         System.out.println("Сумма затрат на зарплатный фонд - " + total);
         System.out.println();
 
-        System.out.println(findMinSalary(employees));
+        System.out.println(findMinSalary());
         System.out.println();
 
-        System.out.println(findMaxSalary(employees));
+        System.out.println(findMaxSalary());
         System.out.println();
 
-        double average = calculateAverage(employees);
+        double average = calculateAverage();
         System.out.println("Средняя За за месяц - " + average);
         System.out.println();
 
-
-        printFullName(employees);
+        printFullName();
         System.out.println();
     }
 }
