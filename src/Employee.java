@@ -1,11 +1,11 @@
 import java.util.Objects;
 
 public class Employee {
+    private static int count;
     private int iD;
     private String fullName;
     private int department;
     private double salary;
-    private static int count;
 
 
     // Constructor
@@ -38,6 +38,9 @@ public class Employee {
         this.salary = salary;
     }
 
+    public int getiD() {
+        return iD;
+    }
 
     // toString
     @Override
@@ -45,7 +48,7 @@ public class Employee {
         return "Сотрудник {" +
                 "iD = " + iD +
                 ", Ф.И.О. = " + fullName +
-                ", Департамент = " + department +
+                ", Отдел = " + department +
                 ", ЗП = " + salary +
                 '}';
     }
